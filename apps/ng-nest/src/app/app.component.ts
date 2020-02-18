@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Message } from '@myworkspace/api-interfaces';
 
 @Component({
-  selector: 'myworkspace-root',
+  selector: 'ng-nest-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

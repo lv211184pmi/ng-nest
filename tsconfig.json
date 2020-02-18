@@ -16,7 +16,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@myworkspace/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@myworkspace/dynamicFormComponent": ["libs/ui/src/lib/components/dynamic-form/dynamic-form.component.ts"],
+      "@myworkspace/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@myworkspace/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
