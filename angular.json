@@ -10,7 +10,7 @@
       },
       "root": "apps/ng-nest",
       "sourceRoot": "apps/ng-nest/src",
-      "prefix": "myworkspace",
+      "prefix": "ng-nest",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

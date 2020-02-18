@@ -1,20 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup } from "@angular/forms";
+import { Component } from '@angular/core'
+import { FormGroup } from '@angular/forms'
 
-import { FieldConfig } from "../../interfaces";
+import { FieldConfig } from '../../interfaces'
 
 @Component({
   selector: 'ng-nest-form-checkbox',
-  templateUrl: './form-checkbox.component.html',
+  template: `
+    <div class="demo-full-width margin-top" [formGroup]="group">
+      <mat-checkbox [formControlName]="field.name">{{ field.label }}</mat-checkbox>
+    </div>
+  `,
   styleUrls: ['./form-checkbox.component.css']
 })
-export class FormCheckboxComponent implements OnInit {
-  field: FieldConfig;
-  group: FormGroup;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class FormCheckboxComponent {
+  field: FieldConfig
+  group: FormGroup
 }

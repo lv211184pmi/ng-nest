@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { NgModule } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
-import { MaterialModule } from './material.module';
-import { FormInputComponent } from './components/form-input/form-input.component';
-import { FormButtonComponent } from './components/form-button/form-button.component';
-import { DynamicFieldDirective } from './directives/dynamic-field.directive';
-import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
-import { FormCheckboxComponent } from './components/form-checkbox/form-checkbox.component';
-import { FormRadioComponent } from './components/form-radio/form-radio.component';
+import { MaterialModule } from './material.module'
+import { FormInputComponent } from './components/form-input/form-input.component'
+import { FormButtonComponent } from './components/form-button/form-button.component'
+import { DynamicFieldDirective } from './directives/dynamic-field.directive'
+import { DynamicFormComponent } from './container/dynamic-form/dynamic-form.component'
+import { FormCheckboxComponent } from './components/form-checkbox/form-checkbox.component'
+import { FormRadioComponent } from './components/form-radio/form-radio.component'
 
 @NgModule({
   imports: [

@@ -2,18 +2,16 @@ import {
   Component,
   EventEmitter,
   Input,
-  OnChanges,
   OnInit,
   Output
-} from '@angular/core';
+} from '@angular/core'
 import {
   FormGroup,
   FormBuilder,
   Validators,
-  FormControl
-} from "@angular/forms";
+} from '@angular/forms'
 
-import { FieldConfig, Validator } from "../../interfaces";
+import { FieldConfig, Validator } from '../../interfaces'
 
 
 @Component({
@@ -22,59 +20,59 @@ import { FieldConfig, Validator } from "../../interfaces";
   styleUrls: ['./dynamic-form.component.css']
 })
 export class DynamicFormComponent implements OnInit {
-  @Input() fields: FieldConfig[] = [];
-  @Output() formSubmit: EventEmitter<any> = new EventEmitter<any>();
+  @Input() fields: FieldConfig[] = []
+  @Output() formSubmit: EventEmitter<any> = new EventEmitter<any>()
 
-  form: FormGroup;
+  form: FormGroup
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.form = this.createControl();
+    this.form = this.createControl()
   }
 
   get value() {
-    return this.form.value;
+    return this.form.value
   }
 
   createControl() {
-    const group = this.fb.group({});
+    const group = this.fb.group({})
     this.fields.forEach(field => {
-      if (field.type === "button") return;
+      if (field.type === 'button') return
       const control = this.fb.control(
         field.value,
         this.bindValidations(field.validations || [])
-      );
-      group.addControl(field.name, control);
-    });
-    return group;
+      )
+      group.addControl(field.name, control)
+    })
+    return group
   }
 
   bindValidations(validations: any) {
     if (validations.length > 0) {
-      const validList = [];
+      const validList = []
       validations.forEach(valid => {
-        validList.push(valid.validator);
-      });
-      return Validators.compose(validList);
+        validList.push(valid.validator)
+      })
+      return Validators.compose(validList)
     }
-    return null;
+    return null
   }
 
   onSubmit(event: Event) {
-    event.preventDefault();
-    event.stopPropagation();
+    event.preventDefault()
+    event.stopPropagation()
     if (this.form.valid) {
-      this.formSubmit.emit(this.form.value);
+      this.formSubmit.emit(this.form.value)
     } else {
-      this.validateAllFormFields(this.form);
+      this.validateAllFormFields(this.form)
     }
   }
 
   validateAllFormFields(formGroup: FormGroup) {
     Object.keys(formGroup.controls).forEach(field => {
-      const control = formGroup.get(field);
-      control.markAsTouched({ onlySelf: true });
-    });
+      const control = formGroup.get(field)
+      control.markAsTouched({ onlySelf: true })
+    })
   }
 }
