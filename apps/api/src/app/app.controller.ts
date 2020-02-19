@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common'
 
-import { Message } from '@myworkspace/api-interfaces'
+import { Message } from '@myworkspace/backend-microservices/api-interfaces'
 
 import { AppService } from './app.service'
 

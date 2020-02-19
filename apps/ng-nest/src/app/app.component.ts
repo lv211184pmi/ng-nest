@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import { Message } from '@myworkspace/api-interfaces'
+import { Message } from '@myworkspace/backend-microservices/api-interfaces'
 
 @Component({
   selector: 'ng-nest-root',
