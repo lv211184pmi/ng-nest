@@ -257,6 +257,33 @@
           }
         }
       }
+    },
+    "live-chat": {
+      "projectType": "library",
+      "root": "libs/live-chat",
+      "sourceRoot": "libs/live-chat/src",
+      "prefix": "myworkspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/live-chat/tsconfig.lib.json",
+              "libs/live-chat/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/live-chat/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/live-chat/jest.config.js",
+            "tsConfig": "libs/live-chat/tsconfig.spec.json",
+            "setupFile": "libs/live-chat/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

@@ -29,6 +29,9 @@
     },
     "backend-microservices-live-chat": {
       "tags": []
+    },
+    "live-chat": {
+      "tags": []
     }
   }
 }

@@ -19,11 +19,14 @@
       "@myworkspace/dynamicFormComponent": [
         "libs/ui/src/lib/container/dynamic-form/dynamic-form.component.ts"
       ],
-      "@myworkspace/backend-microservices/api-interfaces": ["libs/backend-microservices/api-interfaces/src/index.ts"],
+      "@myworkspace/backend-microservices/api-interfaces": [
+        "libs/backend-microservices/api-interfaces/src/index.ts"
+      ],
       "@myworkspace/ui": ["libs/ui/src/index.ts"],
       "@myworkspace/backend-microservices/live-chat": [
         "libs/backend-microservices/live-chat/src/index.ts"
-      ]
+      ],
+      "@myworkspace/live-chat": ["libs/live-chat/src/index.ts"],
     }
   },
   "exclude": ["node_modules", "tmp"]

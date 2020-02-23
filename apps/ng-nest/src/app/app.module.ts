@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component'
 import { AppRoutingModule } from './app-routing.module'
-import { UiModule } from '@myworkspace/ui'
+import { UiModule } from '@myworkspace/ui';
 
 @NgModule({
   declarations: [AppComponent],

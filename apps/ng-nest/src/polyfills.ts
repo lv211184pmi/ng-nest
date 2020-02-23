@@ -60,3 +60,6 @@ import 'zone.js/dist/zone' // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+// to help the custom element to work in the latest browsers
+import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js'

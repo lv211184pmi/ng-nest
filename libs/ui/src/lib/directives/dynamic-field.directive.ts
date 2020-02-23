@@ -12,6 +12,7 @@ import { FormInputComponent } from '../components/form-input/form-input.componen
 import { FormButtonComponent } from '../components/form-button/form-button.component'
 import { FormRadioComponent } from '../components/form-radio/form-radio.component'
 import { FormCheckboxComponent } from '../components/form-checkbox/form-checkbox.component'
+import { FormTextareaComponent } from '../components/form-textarea/form-textarea.component'
 
 
 @Directive({
@@ -26,6 +27,7 @@ export class DynamicFieldDirective implements OnInit {
     radiobutton: FormRadioComponent,
     checkbox: FormCheckboxComponent,
     button: FormButtonComponent,
+    textarea: FormTextareaComponent,
   }
 
   componentRef: any
