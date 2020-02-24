@@ -1,0 +1,1 @@
+export { UiButtonModule } from './ui-button.module'

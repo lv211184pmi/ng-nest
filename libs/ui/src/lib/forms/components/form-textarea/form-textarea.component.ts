@@ -6,8 +6,7 @@ import { FieldConfig } from '../../interfaces'
 @Component({
   selector: 'ng-nest-form-textarea',
   template: `
-    <div>
-      <mat-form-field class="example-full-width" [formGroup]="group">
+      <mat-form-field [ngClass]="field?.class" [formGroup]="group">
         <mat-label>Leave a comment</mat-label>
         <textarea 
           matInput
@@ -23,9 +22,8 @@ import { FieldConfig } from '../../interfaces'
             </mat-error>
         </ng-container>
       </mat-form-field>
-    </div>
   `,
-  styleUrls: ['./form-textarea.component.css']
+  styleUrls: ['./form-textarea.component.scss']
 })
 export class FormTextareaComponent {
   field: FieldConfig

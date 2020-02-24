@@ -35,7 +35,8 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatSliderModule } from '@angular/material/slider'
 import { MatInputModule } from '@angular/material/input'
 import { MatCheckboxModule } from '@angular/material/checkbox'
-import { MatRadioModule } from '@angular/material/radio'
+import { MatRadioModule } from '@angular/material/radio';
+import { UiButtonComponent } from './button/ui-button/ui-button.component'
 
 
 const modules = [

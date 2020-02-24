@@ -1,4 +1,16 @@
-<ng-nest-dynamic-form
-  [fields]="liveChatConfig"
-  (formSubmit)="sendMessage($event)"
-></ng-nest-dynamic-form>
+<div class="chat-window">
+  <div class="chat-window__close-action">
+    <button class="close-button">
+      <i class="material-icons">close</i>
+    </button>
+  </div>
+  <div class="chat-window__messages-container">
+
+  </div>
+  <div class="chat-window__new-messages">
+    <ng-nest-dynamic-form
+      [fields]="liveChatConfig"
+      (formSubmit)="sendMessage($event)"
+    ></ng-nest-dynamic-form>
+  </div>
+</div>

@@ -15,7 +15,7 @@ export class PrivateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.liveChatService.createWebElement('left-chat')
-    this.liveChatService.createWebElement('right-chat')
+    this.liveChatService.createWebElement('chat left-chat')
+    this.liveChatService.createWebElement('chat right-chat')
   }
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
-import { MaterialModule } from './material.module'
+import { MaterialModule } from '../material.module'
 import { FormInputComponent } from './components/form-input/form-input.component'
 import { FormButtonComponent } from './components/form-button/form-button.component'
 import { DynamicFieldDirective } from './directives/dynamic-field.directive'
@@ -39,4 +39,4 @@ import { FormTextareaComponent } from './components/form-textarea/form-textarea.
     FormRadioComponent
   ]
 })
-export class UiModule {}
+export class UiFormModule {}

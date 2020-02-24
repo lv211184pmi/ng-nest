@@ -1,0 +1,24 @@
+<ng-container [ngSwitch]="buttonConfig.type">
+  
+  <button *ngSwitchCase="'flat'" mat-flat-button>
+    {{ buttonConfig?.label }}
+  </button>
+  
+  <button *ngSwitchCase="'icon-button'" mat-icon-button>
+    <mat-icon>{{ buttonConfig?.icon }}</mat-icon>
+  </button>
+  
+  <button *ngSwitchCase="'fab'" mat-fab>
+    {{ buttonConfig?.label }}
+    <mat-icon *ngIf="buttonConfig?.icon">{{ buttonConfig?.icon }}</mat-icon>
+  </button>
+  
+  <button *ngSwitchCase="'basic'" mat-button>
+    {{ buttonConfig?.label }}
+  </button>
+</ng-container>
+
+<!-- <button mat-fab (click)="onButtonClick($event)">
+  {{ buttonConfig?.label }}
+  <mat-icon *ngIf="buttonConfig?.icon">{{ buttonConfig?.icon }}</mat-icon>
+</button> -->

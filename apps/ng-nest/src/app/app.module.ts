@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component'
 import { AppRoutingModule } from './app-routing.module'
-import { UiModule } from '@myworkspace/ui';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +13,6 @@ import { UiModule } from '@myworkspace/ui';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    UiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

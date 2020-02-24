@@ -6,6 +6,7 @@ export const LiveChatFormConfig: FieldConfig[] = [
         type: 'textarea',
         label: 'enter your message',
         name: 'chatMessage',
+        class: 'full-width',
         validations: [
             {
                 name: 'required',
@@ -16,6 +17,13 @@ export const LiveChatFormConfig: FieldConfig[] = [
     },
     {
         type: 'button',
-        label: 'Send message'
+        label: 'Send message',
+        class: 'full-width'
+    }
+]
+
+export const ChatPendingConfig: FieldConfig[] = [
+    {
+        type: 'button',
     }
 ]

@@ -1,0 +1,43 @@
+.chat-window {
+    min-height: 200px;
+    width: 300px;
+    background-color: rgba(230, 243, 255, 0.4);
+    &__close-action {
+        height: 35px;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 2;
+        .close-button {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            border-color: #002E55;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            &:hover {
+                background-color: #002E55;
+                i {
+                    color: #FFF;
+                }
+            }
+            i {
+                font-size: 15px;
+                color: #002E55;
+            }
+        }
+    }
+    &__new-messages {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+:host ::ng-deep .full-width {
+    width: 100%;
+}

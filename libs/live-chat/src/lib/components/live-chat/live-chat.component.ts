@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core'
 
-import { DynamicFormComponent } from '@myworkspace/dynamicFormComponent'
+import { DynamicFormComponent } from '@myworkspace/ui/forms'
 import { LiveChatFormConfig } from '../../constants/forms-constants'
 import { FieldConfig } from '../../interfaces/dynamic-form.interface'
 
@@ -8,7 +8,7 @@ import { FieldConfig } from '../../interfaces/dynamic-form.interface'
 @Component({
   selector: 'ng-nest-live-chat',
   templateUrl: './live-chat.component.html',
-  styleUrls: ['./live-chat.component.css']
+  styleUrls: ['./live-chat.component.scss']
 })
 export class LiveChatComponent {
   @ViewChild(DynamicFormComponent) form: DynamicFormComponent

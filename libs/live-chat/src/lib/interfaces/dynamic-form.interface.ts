@@ -12,4 +12,8 @@ export interface FieldConfig {
     type: string
     value?: any
     validations?: Validator[]
+    class?: string
+    subType?: string
+    color?: string
+    icon?: string
 }

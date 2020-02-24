@@ -30,3 +30,17 @@ $ng-nest-theme: mat-light-theme($ng-nest-primary, $ng-nest-accent, $ng-nest-warn
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.chat {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+}
+
+.left-chat {
+    left: 30px;
+}
+
+.right-chat {
+    right: 30px;
+}

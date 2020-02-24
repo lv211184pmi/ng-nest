@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core'
 
-import { DynamicFormComponent } from '@myworkspace/dynamicFormComponent'
+import { DynamicFormComponent } from '@myworkspace/ui/forms'
 import { FieldConfig } from '../../../shared/interfaces/dynamic-form.interface'
 import { LoginFormConfig } from '../../constants/login-form-config'
 
