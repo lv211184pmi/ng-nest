@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, Output, EventEmitter } from '@angular/core'
 
 import { UIButtonConfig } from '../../interfaces/ui-button.interface'
 
@@ -7,18 +7,16 @@ import { UIButtonConfig } from '../../interfaces/ui-button.interface'
   templateUrl: './chat-pending.component.html',
   styleUrls: ['./chat-pending.component.css']
 })
-export class ChatPendingComponent implements OnInit {
+export class ChatPendingComponent {
+  @Output() openChat = new EventEmitter<null>()
+
   buttonConfig: UIButtonConfig = {
-    type: 'basic',
-    // icon: 'favorite'
-    label: 'tratata'
-  }
-  constructor() { }
-
-  ngOnInit(): void {
+    type: 'fab',
+    icon: 'question_answer',
+    color: '#002E55'
   }
 
-  public onButtonClick() {
-    console.log('Button was clicked!')
+  public onButtonClick(): void {
+    this.openChat.emit()
   }
 }

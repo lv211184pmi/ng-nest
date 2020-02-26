@@ -1,24 +1,39 @@
 <ng-container [ngSwitch]="buttonConfig.type">
   
-  <button *ngSwitchCase="'flat'" mat-flat-button>
+  <button 
+    *ngSwitchCase="'flat'" 
+    mat-flat-button
+    (click)="onButtonClick()"
+    [style.background-color]="buttonConfig?.color || 'none'"
+  >
     {{ buttonConfig?.label }}
   </button>
   
-  <button *ngSwitchCase="'icon-button'" mat-icon-button>
+  <button
+    *ngSwitchCase="'icon-button'"
+    mat-icon-button
+    (click)="onButtonClick()"
+    [style.background-color]="buttonConfig?.color || 'none'"
+  >
     <mat-icon>{{ buttonConfig?.icon }}</mat-icon>
   </button>
   
-  <button *ngSwitchCase="'fab'" mat-fab>
+  <button
+    *ngSwitchCase="'fab'"
+    mat-fab
+    (click)="onButtonClick()"
+    [style.background-color]="buttonConfig?.color || 'none'"
+  >
     {{ buttonConfig?.label }}
     <mat-icon *ngIf="buttonConfig?.icon">{{ buttonConfig?.icon }}</mat-icon>
   </button>
   
-  <button *ngSwitchCase="'basic'" mat-button>
+  <button
+    *ngSwitchDefault
+    mat-button
+    (click)="onButtonClick()"
+    [style.background-color]="buttonConfig?.color || 'none'"
+  >
     {{ buttonConfig?.label }}
   </button>
 </ng-container>
-
-<!-- <button mat-fab (click)="onButtonClick($event)">
-  {{ buttonConfig?.label }}
-  <mat-icon *ngIf="buttonConfig?.icon">{{ buttonConfig?.icon }}</mat-icon>
-</button> -->

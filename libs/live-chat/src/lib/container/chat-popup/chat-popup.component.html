@@ -1,2 +1,8 @@
-<ng-nest-chat-pending></ng-nest-chat-pending>
-<!-- <ng-nest-live-chat></ng-nest-live-chat> -->
+<ng-nest-chat-pending 
+    *ngIf="state==='closed'; else liveChat"
+    (openChat)="onChatStateChange('opened')"
+></ng-nest-chat-pending>
+<ng-template #liveChat>
+    <ng-nest-live-chat (closeChat)="onChatStateChange('closed')"></ng-nest-live-chat>
+</ng-template>
+    
