@@ -284,6 +284,60 @@
         }
       },
       "schematics": {}
+    },
+    "apps-ms-chat": {
+      "root": "apps/apps/ms-chat",
+      "sourceRoot": "apps/apps/ms-chat/src",
+      "projectType": "application",
+      "prefix": "apps-ms-chat",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/apps/ms-chat",
+            "main": "apps/apps/ms-chat/src/main.ts",
+            "tsConfig": "apps/apps/ms-chat/tsconfig.app.json",
+            "assets": ["apps/apps/ms-chat/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/apps/ms-chat/src/environments/environment.ts",
+                  "with": "apps/apps/ms-chat/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "apps-ms-chat:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/apps/ms-chat/tsconfig.app.json",
+              "apps/apps/ms-chat/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/apps/ms-chat/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/apps/ms-chat/jest.config.js",
+            "tsConfig": "apps/apps/ms-chat/tsconfig.spec.json"
+          }
+        }
+      }
     }
   },
   "cli": {

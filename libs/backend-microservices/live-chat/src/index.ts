@@ -1,1 +1,1 @@
-export * from './lib/backend-microservices-live-chat'
+export * from './lib/main'
